@@ -1,0 +1,94 @@
+.swipology {
+    position: relative;
+    background: #777;
+    overflow: hidden;
+}
+
+.swipology img {
+    max-width: 100%;
+    display: none;
+    margin:auto;
+    border: 0;
+    padding: 0;
+}
+
+.swipology a:first-child > img {
+    display:block;
+}
+
+.swipology .swipology_content {
+    overflow:auto;
+    -webkit-transform: translate3d(0,0,0);
+}
+
+.swipology .swipology_content div {
+    float:left;
+    border-radius: 10px;
+}
+
+.swipology .swipology_content div img {
+    display:block;
+    zoom: 16;
+    height:auto;
+    max-height: 100%;
+    width: auto;
+    max-width:100%;
+    visibility: hidden;
+}
+
+.swipology .swipology_dots {
+    left: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 3%;
+    z-index:10;
+}
+.swipology .swipology_dots a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 4px 4px;
+}
+
+.swipology .swipology_dots a span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #aaa;
+    background: rgba(255,255,255,.3);
+    box-shadow: 0 0 3px rgba(0,0,0,.3);
+    border-radius: 50%;
+}
+
+.swipology .swipology_dots a.swipology_active span {
+    background: white;
+    background: rgba(255,255,255,.7);
+}
+
+.swipology .swipology_arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    height: 60px;
+    width: 30px;
+    background: #666;
+    background: rgba(0,0,0,.1);
+    display: block;
+    cursor: pointer;
+    border:1px solid transparent;
+    z-index:1;
+}
+
+.swipology .swipology_arrow:hover {
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border:1px solid rgba(255,255,255,.3);
+}
+
+.swipology .swipology_arrow.swipology_arrow_left {
+    left: 0;
+}
+
+.swipology .swipology_arrow.swipology_arrow_right {
+    right: 0;
+}
